@@ -10,6 +10,7 @@ body{
     font-size: 18px;
     font-family: 'Effra', sans-serif;
     font-weight: 400;
+    overflow-x: hidden;
 }
 
 .visually-hidden{
@@ -55,4 +56,39 @@ body{
         color: black;
         background-color: #A8FF35;
     }
+
+    &--black{
+        color: white;
+        background-color: black;
+    }
+}
+
+.switch{
+    width: 104px;
+    position: relative;
+    height: 52px;
+    background: #FFFFFF;
+    display: block!important;
+    border-radius: 99px;
+    &__input{
+        appearance: none;
+        &:checked + .switch__inner{
+            left: 8px;
+        }
+    }
+
+
+    &__inner{
+        width: 36px;
+        height: 36px;
+        background-color: #A8FF35;
+        border-radius: 99px;
+        left: 60px;
+        transition: left .4s ;
+        position: absolute;
+
+    }
+    
+    cursor: pointer;
+
 }
